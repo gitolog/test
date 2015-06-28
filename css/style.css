@@ -1,0 +1,130 @@
+@import "css/ss-standard.css";
+/* Font seems to be commercial but found it out */
+@import url(http://fonts.googleapis.com/css?family=Signika:400,700,300,600);
+body {
+  background-color: #eaedf1;
+  font-family: 'Signika', sans-serif;
+  color: #5e6d81;
+  font-weight: 400;
+}
+body .container-main {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+body a,
+body a:focus,
+body a:hover {
+  color: #5e6d81;
+}
+/* Panel options */
+.panel {
+  border: none;
+  box-shadow: none;
+  /* Tasks panel */
+  /* Revenue panel */
+}
+.panel > .panel-body {
+  padding: 0;
+}
+.panel > .panel-heading {
+  background-color: #323a45;
+  border: none;
+}
+.panel .panel-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+.panel.panel-tasks {
+  min-width: 230px;
+}
+.panel.panel-tasks .panel-title {
+  text-align: center;
+}
+.panel.panel-tasks .vpadded {
+  padding: 40px 0;
+}
+.panel.panel-revenue {
+  background-color: #1fbba6;
+  color: white;
+}
+.panel.panel-revenue .flot-chart {
+  width: 300px;
+  height: 200px;
+  margin: 20px auto;
+}
+/* Justified tabs */
+.nav-justified > li {
+  display: table-cell;
+  float: none;
+  width: 1%;
+  background-color: #f9fafc;
+  border-top: 1px solid #eaedf1;
+  /* font-family: 'ProximaNova' is commercial! */
+  font-size: 11px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.nav-justified > li:first-child {
+  border-right: 1px solid #eaedf1;
+}
+.nav-justified > li:last-child {
+  border-left: 1px solid #eaedf1;
+}
+.nav-justified > li.active {
+  background-color: white;
+  border-top-color: white;
+}
+.nav-justified > li.active * {
+  color: #14b9d6;
+}
+.nav-justified > li a {
+  padding: 15px;
+}
+.nav-justified > li a:focus,
+.nav-justified > li a:hover {
+  color: inherit;
+  background-color: transparent;
+}
+/* Tasks chart */
+.easy-pie-chart {
+  position: relative;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+}
+.easy-pie-chart::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  /* IE 9 */
+  -webkit-transform: translate(-50%, -50%);
+  /* Safari */
+  transform: translate(-50%, -50%);
+  background-color: #323a45;
+}
+.easy-pie-chart .value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  /* IE 9 */
+  -webkit-transform: translate(-50%, -50%);
+  /* Safari */
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  color: white;
+}
+.easy-pie-chart .value::after {
+  content: "%";
+  vertical-align: 70%;
+  margin-top: 10px;
+  font-size: 24px;
+  color: #9ea7b3;
+}
