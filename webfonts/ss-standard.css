@@ -16,6 +16,7 @@
 }
 
 .ss-icon {
+  vertical-align: middle;
   font-size: 1.5em;
 }
 
@@ -30,6 +31,7 @@
   text-decoration: none;
   text-rendering: optimizeLegibility;
   white-space: nowrap;
+  vertical-align: middle;
   -webkit-font-feature-settings: "liga";
   -moz-font-feature-settings: "liga=1";
   -moz-font-feature-settings: "liga";

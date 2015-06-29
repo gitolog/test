@@ -1,6 +1,11 @@
-@import "css/ss-standard.css";
+@import "ss-standard.css";
 /* Font seems to be commercial but found it out */
 @import url(http://fonts.googleapis.com/css?family=Signika:400,700,300,600);
+/* Blue */
+/* Orange */
+/* Green */
+/* Gray */
+/* Lt gray */
 body {
   background-color: #eaedf1;
   font-family: 'Signika', sans-serif;
@@ -15,6 +20,7 @@ body a,
 body a:focus,
 body a:hover {
   color: #5e6d81;
+  outline: none;
 }
 /* Panel options */
 .panel {
@@ -22,9 +28,7 @@ body a:hover {
   box-shadow: none;
   /* Tasks panel */
   /* Revenue panel */
-}
-.panel > .panel-body {
-  padding: 0;
+  /* Person panel */
 }
 .panel > .panel-heading {
   background-color: #323a45;
@@ -32,11 +36,18 @@ body a:hover {
 }
 .panel .panel-title {
   font-size: 18px;
+  text-align: center;
   font-weight: 600;
   color: #fff;
 }
+.panel > .panel-body {
+  padding: 0;
+}
+.panel .panel-footer {
+  background-color: white;
+}
 .panel.panel-tasks {
-  min-width: 230px;
+  min-width: 200px;
 }
 .panel.panel-tasks .panel-title {
   text-align: center;
@@ -46,12 +57,172 @@ body a:hover {
 }
 .panel.panel-revenue {
   background-color: #1fbba6;
-  color: white;
+  color: #9ea7b3;
+}
+.panel.panel-revenue .panel-title {
+  padding-top: 20px;
+}
+.panel.panel-revenue .panel-footer {
+  padding: 20px 0;
 }
 .panel.panel-revenue .flot-chart {
-  width: 300px;
+  width: 90%;
   height: 200px;
   margin: 20px auto;
+}
+.panel.panel-revenue hr {
+  margin: 5px 0;
+}
+.panel.panel-revenue .title {
+  font-size: 13px;
+  font-weight: 300;
+  margin-left: 7px;
+}
+.panel.panel-revenue .chart-sm {
+  padding: 0 15px;
+}
+.panel.panel-revenue .chart-sm-content {
+  display: inline-block;
+  width: 65%;
+  height: 60px;
+}
+.panel.panel-revenue .value-content {
+  display: inline-block;
+  width: 35%;
+  padding-top: 9px;
+  font-size: 34px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #1fbba6;
+}
+.panel.panel-revenue .value-content small {
+  font-size: 10px;
+  line-height: 10px;
+  text-transform: uppercase;
+  color: #9ea7b3;
+}
+.panel.panel-revenue .value-content small:before {
+  content: '';
+  display: block;
+}
+.panel.panel-revenue .col-xs-6 {
+  padding: 10px 0 0 15px;
+}
+.panel.panel-revenue .col-xs-6 .value-content {
+  font-size: 30px;
+  padding: 10px 5px;
+}
+.panel.panel-person {
+  background-color: white;
+}
+.panel.panel-person .img-rounded {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.panel.panel-person .person-info {
+  color: #5e6d81;
+  padding: 30px 20px;
+}
+.panel.panel-person .person-info .name {
+  display: inline-block;
+  text-align: left;
+  min-width: 120px;
+  vertical-align: middle;
+  font-size: 24px;
+  line-height: 1em;
+  font-weight: 300;
+}
+.panel.panel-person .person-info .name small {
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 300;
+}
+.panel.panel-person .person-info .image {
+  display: inline-block;
+  vertical-align: middle;
+  width: 80px;
+  height: 80px;
+  margin-right: 17px;
+  background-position: center;
+  background-size: cover;
+}
+.panel.panel-person .panel-footer {
+  padding: 0 15px;
+  color: white;
+}
+.panel.panel-person .panel-footer .col-xs-4 {
+  font-size: 1.178em;
+  padding: 13px 0;
+}
+.panel.panel-person .panel-footer .col-xs-4 i {
+  font-size: 1em;
+}
+.panel.panel-person .panel-footer .col-xs-4 .small {
+  font-size: 11px;
+  font-weight: 300;
+}
+.panel.panel-person .panel-footer .tab-likes {
+  background-color: #14b9d6;
+}
+.panel.panel-person .panel-footer .tab-friends {
+  background-color: #f27935;
+}
+.panel.panel-person .panel-footer .tab-views {
+  background-color: #1fbba6;
+}
+.panel.panel-mail .nav {
+  font-size: 17px;
+  line-height: 17px;
+  font-weight: 500;
+}
+.panel.panel-mail .nav > li > a {
+  padding: 15px 30px;
+}
+.panel.panel-mail .nav > li > a:focus,
+.panel.panel-mail .nav > li > a:hover {
+  background-color: #FAFAFA;
+}
+.panel.panel-mail .nav > li.active a {
+  background-color: #9ea7b3;
+  color: white;
+}
+.panel.panel-mail .nav > li.active a .ss-icon {
+  color: white;
+}
+.panel.panel-mail .nav > li.active a .badge {
+  background-color: #f27935;
+  color: white;
+}
+.panel.panel-mail .nav > li:not(.active) > a {
+  border-top: solid 1px #eaedf1;
+}
+.panel.panel-mail .nav > li:not(.active) > a .ss-icon {
+  color: #5e6d81;
+}
+.panel.panel-mail .nav > li:not(.dropdown) * {
+  color: #9ea7b3;
+}
+.panel.panel-mail .nav li .ss-icon {
+  margin-right: 5px;
+  font-size: 0.86em;
+  line-height: 0.8em;
+}
+.panel.panel-mail .badge {
+  background-color: #dbe1e8;
+  color: #9ea7b3;
+  font-size: 0.6em;
+  font-weight: 300;
+}
+.panel.panel-mail .dropdown-toggle {
+  font-size: 13px;
+  font-weight: 300;
+}
+.panel.panel-mail .dropdown-menu > .active > a,
+.panel.panel-mail .dropdown-menu > .active > a:focus,
+.panel.panel-mail .dropdown-menu > .active > a:hover {
+  background-color: #9ea7b3;
+  color: white !important;
 }
 /* Justified tabs */
 .nav-justified > li {

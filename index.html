@@ -21,7 +21,7 @@
         <div class="container container-main">
             <div class="row">
 
-                <div class="col-md-4">
+                <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="panel panel-revenue">
                         <div class="panel-body">
                             <div class="panel-title text-center">
@@ -29,10 +29,31 @@
                             </div>
                             <div class="flot-chart" id="revenue-chart"></div>
                         </div>
+                        <div class="panel-footer">
+                            <div class="revenue-stats clearfix">
+                                <div class="chart-sm">
+                                    <div class="title">Inquiries</div>
+                                    <div id="graph-inquiries" class="chart-sm-content"></div><!--
+                                    --><div class="value-content pull-right text-center">
+                                        +142
+                                        <small>From last year</small>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="col-xs-6">
+                                    <div class="title">Gross revenue</div><!--
+                                    --><div class="value-content text-center">9,362.74</div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="title">Net revenue</div><!--
+                                    --><div class="value-content text-center">6,734.89</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-xs-4">
+                <div class="col-sm-6 col-md-4 col-lg-3">
 
                     <div class="panel panel-dark panel-tasks">
                         <div class="panel-heading">
@@ -60,7 +81,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="nopad">
                                 <ul class="nav nav-justified nav-top-marker">
                                     <li class="active">
@@ -85,11 +105,114 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="panel panel-person">
+                        <div class="panel-body text-center">
+                            <a href="#">
+                                <div class="person-info">
+                                    <div class="image img-rounded" style="background-image:url('images/arya-sm.jpg');"></div><!--
+                                    --><span class="name">Arya Stark<br><small>Winterfell</small></span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="row stacked">
+                                <div class="col-xs-4 tab-likes text-center">
+                                    <i class="ss-icon ss-heart"></i>
+                                    <div class="small">2,719</div>
+                                </div>
+                                <div class="col-xs-4 tab-friends text-center">
+                                    <i class="ss-icon ss-users"></i>
+                                    <div class="small">5,386</div>
+                                </div>
+                                <div class="col-xs-4 tab-views text-center">
+                                    <i class="ss-icon ss-view"></i>
+                                    <div class="small">24,953</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 
-                <div class="col-md-4">
-
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="panel panel-mail">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <span>Mailbox</span>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <nav class="navmenu navmenu-full" role="navigation">
+                                <ul class="nav navmenu-nav">
+                                    <li class="active">
+                                        <a href="#">
+                                            <i class="ss-icon ss-inbox"></i>
+                                            Inbox
+                                            <span class="badge badge-rounded pull-right">3</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ss-icon ss-star"></i>
+                                            Starred
+                                            <span class="badge badge-rounded pull-right">7</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ss-icon ss-flag"></i>
+                                            Flagged
+                                            <span class="badge badge-rounded pull-right">13</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ss-icon ss-send"></i>
+                                            Sent
+                                            <span class="badge badge-rounded pull-right">284</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ss-icon ss-trash"></i>
+                                            Deleted
+                                            <span class="badge badge-rounded pull-right">284</span>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" data-no-turbolink="true">
+                                            More <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu navmenu-nav" role="menu">
+                                            <li class="">
+                                                <a href="">
+                                                    <span>Drafts</span>
+                                                </a>
+                                            </li>
+                                            <li class="active">
+                                                <a href="">
+                                                    <span>Spam</span>
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a href="">
+                                                    <span>Templates</span>
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a href="">
+                                                    <span>Greeting cards</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -97,7 +220,9 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/jquery.easypiechart.js"></script>
         <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/flot/0.8.2/jquery.flot.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.time.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.time.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.stack.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.resize.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>

@@ -1,22 +1,32 @@
 
-@import "css/ss-standard.css"; /* Font seems to be commercial but found it out */
+@import "ss-standard.css"; /* Font seems to be commercial but found it out */
 @import url(http://fonts.googleapis.com/css?family=Signika:400,700,300,600);
 
-@link-color : #5e6d81;
-@text-faded-color : #9ea7b3;
+@main-color1 : #14b9d6; /* Blue */
+@main-color2 : #f27935; /* Orange */
+@main-color3 : #1fbba6; /* Green */
+
+@text-color : #5e6d81; /* Gray */
+@text-faded-color : #9ea7b3; /* Lt gray */
+
 @panel-header-color : #323a45;
+@navtab-color : #f9fafc;
+@active-color : white;
+@active-text-color :#14b9d6;
+@border-color :#eaedf1;
 
 body {
     background-color: #eaedf1;
     font-family: 'Signika', sans-serif;
-    color: @link-color;
+    color: @text-color;
     font-weight: 400;
     .container-main {
         padding-top: 50px;
         padding-bottom: 50px;
     }
     a, a:focus, a:hover {
-        color: @link-color;
+        color: @text-color;
+        outline: none;
     }
 }
 
@@ -24,22 +34,25 @@ body {
 .panel {
     border: none;
     box-shadow: none;
-    > .panel-body {
-        padding: 0;
-    }
     > .panel-heading {
         background-color: @panel-header-color;
         border: none;
     }
     .panel-title {
         font-size: 18px;
+        text-align: center;
         font-weight: 600;
         color: #fff;
     }
-
+    > .panel-body {
+        padding: 0;
+    }
+    .panel-footer {
+        background-color: white;
+    }
     /* Tasks panel */
     &.panel-tasks {
-        min-width: 230px;
+        min-width: 200px;
         .panel-title {
             text-align: center;
         }
@@ -48,16 +61,113 @@ body {
         }
     }
     /* Revenue panel */
-    &.panel-revenue{
+    &.panel-revenue {
         background-color: #1fbba6;
-        color: white;
+        color: #9ea7b3;
+        .panel-title { padding-top: 20px; }
+        .panel-footer { padding: 20px 0; }
         .flot-chart {
-            width:300px;
+            width:90%;
             height: 200px;
             margin: 20px auto;
         }
+        hr { margin: 5px 0; }
+        .title { font-size: 13px; font-weight: 300; margin-left: 7px; }
+        .chart-sm { padding: 0 15px; }
+        .chart-sm-content {
+            display: inline-block;
+            width: 65%;
+            height: 60px;
+        }
+        .value-content {
+            display: inline-block;
+            width: 35%;
+            padding-top: 9px;
+            font-size: 34px;
+            line-height: 20px;
+            font-weight: 500;
+            color: @main-color3;
+            small { font-size:10px; line-height: 10px; text-transform: uppercase; color: @text-faded-color;  }
+            small:before { content:''; display:block; }
+        }
+        .col-xs-6 { padding: 10px 0 0 15px; }
+        .col-xs-6 .value-content { font-size: 30px; padding: 10px 5px; }
+    }
+    /* Person panel */
+    &.panel-person {
+        background-color: white;
+        .img-rounded {
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+        }
+        .person-info {
+            color:#5e6d81;
+            padding: 30px 20px;
+            .name {
+                display: inline-block;
+                text-align: left;
+                min-width: 120px;
+                vertical-align: middle;
+                font-size: 24px;
+                line-height: 1em;
+                font-weight: 300;
+                small { font-size: 13px; line-height: 13px;font-weight: 300; }
+            }
+            .image {
+                display: inline-block;
+                vertical-align: middle;
+                width:80px;
+                height: 80px;
+                margin-right: 17px;
+                background-position: center;
+                background-size: cover;
+            }
+        }
+        .panel-footer {
+            padding:0 15px;
+            color:white;
+            .col-xs-4 {
+                font-size: 1.178em;
+                padding: 13px 0;
+                i { font-size: 1em; }
+                .small {
+                    font-size: 11px;
+                    font-weight: 300;
+                }
+            }
+            .tab-likes { background-color: @main-color1; }
+            .tab-friends { background-color: @main-color2; }
+            .tab-views { background-color: @main-color3; }
+        }
+    }
+    &.panel-mail {
+        .nav { font-size: 17px; line-height: 17px; font-weight: 500; }
+        .nav > li > a { padding: 15px 30px; }
+        .nav > li > a:focus, .nav > li > a:hover { background-color: #FAFAFA; }
+        .nav > li.active a {
+            background-color:#9ea7b3;
+            color: white;
+            .ss-icon { color: white; }
+            .badge { background-color:#f27935;  color:white; }
+        }
+        .nav > li:not(.active) > a{
+            border-top: solid 1px #eaedf1;
+            .ss-icon { color: @text-color; }
+        }
+        .nav > li:not(.dropdown) * { color: @text-faded-color; }
+        .nav li .ss-icon { margin-right: 5px; font-size:0.86em; line-height: 0.8em; }
+        .badge { background-color: #dbe1e8; color: #9ea7b3; font-size:0.6em; font-weight: 300; }
+        .dropdown-toggle { font-size:13px; font-weight: 300; }
+        .dropdown-menu > .active > a,
+        .dropdown-menu > .active > a:focus,
+        .dropdown-menu > .active > a:hover {
+            background-color: #9ea7b3;
+            color: white !important;
+        }
     }
 }
+
 
 /* Justified tabs */
 .nav-justified {
@@ -65,23 +175,23 @@ body {
         display: table-cell;
         float: none;
         width: 1%;
-        background-color: #f9fafc;
-        border-top: 1px solid #eaedf1;
+        background-color: @navtab-color;
+        border-top: 1px solid @border-color;
         /* font-family: 'ProximaNova' is commercial! */
         font-size: 11px;
         font-weight: 300;
         text-transform: uppercase;
         &:first-child {
-            border-right: 1px solid #eaedf1;
+            border-right: 1px solid @border-color;
         }
         &:last-child {
-            border-left: 1px solid #eaedf1;
+            border-left: 1px solid @border-color;
         }
         &.active {
-            background-color: white;
-            border-top-color: white;
+            background-color: @active-color;
+            border-top-color: @active-color;
             * {
-                color: #14b9d6;
+                color: @active-text-color;
             }
         }
         a {
@@ -133,3 +243,6 @@ body {
         }
     }
 }
+
+
+
